@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Button } from '../styled/Button';
 
 const Container = styled.div`
 max-width: 1182px;
@@ -20,23 +21,7 @@ align-items: center;
     }
 }
 `;
-const Button = styled.button`
-background-color: black;
-color: white;
-min-width: 220px;
-padding: 10px 18px;
-height: 44px;
-border-radius: 4px;
-position: absolute;
-right: 150px;
-font-size: 16px;
 
-&:hover {
-   background-color: white;
-   color:black;
-   transform: 0.5s background-color ease-in;
-  }
-`;
 
 const StartGame = ({toggle}) => {
     return (
