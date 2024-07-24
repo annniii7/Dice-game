@@ -5,8 +5,10 @@ import styled from 'styled-components'
 import RollDice from './RollDice'
 import { useState } from 'react'
 import { Button, OutlineButton } from '../styled/Button'
+import Rules from './Rules'
 
 const Gameplay = () => {
+    const [showrules, setshowrules] = useState(false)
     const [score, setscore] = useState(0)
     const [selectedNumber, setselectedNumber] = useState()
     const [currentdice, setcurrentdice] = useState(1)
@@ -41,8 +43,9 @@ const Gameplay = () => {
       <RollDice currentdice={currentdice} rolldice={rolldice}  />
       <div className="btns">
         <OutlineButton onClick={()=>setscore(0)}>Reset</OutlineButton>
-        <Button>Show Rules</Button>
+        <Button  onClick={()=>setshowrules(prev=>!prev)}>{showrules?"Hide":"Show"} Rules</Button>
         </div>
+        {showrules && <Rules/>}
     </MainContainer>
   )
 }
