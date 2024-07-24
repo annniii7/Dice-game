@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+.vite\deps_temp_08ddb325
 .vite
 package-lock.json
 .eslintrc.cjs
